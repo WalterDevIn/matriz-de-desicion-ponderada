@@ -1,0 +1,499 @@
+:root {
+    --red: #E26D5C;
+    --blue: #067BC2;
+    --lavander: #F0E2E7;
+    --green: #7DDE92;
+    --black: #000000;
+    font-family: "Varela Round";
+
+}
+
+body {
+    
+    margin: 0;
+    padding: 0;
+
+    font-size: 21px;
+
+    background: var(--lavander);
+
+
+}
+
+nav {
+
+
+    font-weight: 300;
+
+    width: 100%;
+    height: 12vh;
+
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+
+        height: 100%;
+        
+        display: flex;
+        align-items: center;
+
+        & div {
+            
+            height: 100%;
+            aspect-ratio: 1;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            & i {
+
+                transform: scale(1.75);
+
+            }
+        }
+
+        & h1 {
+
+            font-size: 24px;
+            font-weight: 400;
+
+        }
+    }
+
+    .buttons {
+
+        padding: 0 22px;
+
+        display: flex;
+        gap: 22px;
+
+        align-items: center;
+
+        & a{
+            
+            font-size: 0.85em;
+
+            padding: 0 22px;
+            height: 60%;
+
+            display: flex;
+            align-items: center;
+
+            background-color: white;
+            
+            border-radius: 6px;
+
+            text-decoration: none;
+        }
+
+        & button {
+            
+
+            aspect-ratio: 1;
+            height: 60%;
+
+            border: none;
+            border-radius: 6px;
+
+            color: #333;
+            background-color: var(--green);
+
+
+            & i {
+
+                transform: scale(1.6);
+            
+            }
+        }
+    }
+}
+
+main {
+
+    margin: 3vh 0vh 0vh 0vh;
+
+    .row {
+
+        display: flex;
+        gap: 3vh;
+
+        .facts, .options, .tools {
+
+            height: 72vh;
+
+
+            background-color: white;
+
+        }
+        
+    }
+    
+    
+}
+
+.facts {
+
+    display: flex;
+    flex-direction: column;
+
+    
+    border-radius: 6px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+    
+    width: 18vw;
+    
+    .facts-header {
+        
+        display: flex;
+        justify-content: space-between;
+        margin: 0.5em;
+        border-bottom: var(--black) solid 4px;
+        
+        & h2 {
+            
+            font-family: monospace;
+            font-size: 24px;
+            
+            margin: 0;
+            padding: 1px;
+            
+        }
+    }
+
+    .facts-list {
+
+        font-size: 18px;
+        line-height: 1.4em;
+
+        .factor {
+
+            display: flex;
+            justify-content: space-between;
+
+            & p {
+
+                margin: 0;
+                padding: 0 10px;
+
+            }
+        }
+    }
+
+    .facts-buttons {
+
+        display: flex;
+
+        .add-factor {
+
+            height: 1em;
+            width: 80%;
+            font-size: 18px;
+            margin: 0px 7px;
+            padding: 3px;
+            border: none;
+
+            &::placeholder {
+
+                font-size: 16px;
+                font-style: italic;
+
+            }
+
+            &:focus {
+
+                outline: none;
+                border:none;
+
+            }
+        }
+        
+        .remove-factor {
+
+            width: 100%;
+            padding: 16px;
+            border: none;  
+
+            background-color: var(--red);
+            
+            border-radius: 0 6px 6px 0;
+
+            box-shadow: var(--red) 2px 0px 10px;
+
+            &::shadow {
+                z-index: 0;
+            }
+        }
+        
+        .add-factor i, .remove-factor i {
+
+            transform: scale(1.5);
+
+        }
+    }
+}
+
+.options {
+
+    
+    width: 76vw;
+    background-color: #00000022 !important;
+    display: flex;
+        flex-direction: row;
+        gap: 2vh;
+
+    border-radius: 6px;
+
+    background-color: var(--lavander);
+
+    .option {
+
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+
+        background-color: white;
+        border-radius: 6px;
+        
+        .title {
+
+            font-size: 24px;
+            font-weight: 400;
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5em;
+            border-bottom: var(--black) solid 4px;
+            
+            & h2 {
+                
+                font-family: monospace;
+                font-size: 24px;
+                
+                margin: 0;
+                padding: 1px;
+                
+            }
+        }
+        .values {
+
+            .value {
+
+                font-size: 18px;
+            
+            }
+        }
+    }
+}
+
+.tools {
+
+    border-radius: 6px 0 0 6px;
+
+    width: 6vw;
+    height: 66vh !important;
+    
+    padding: 3vh 0 3vh 0;
+
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3vh;
+
+    & button {
+
+        width: 60%;
+        aspect-ratio: 1;
+
+        border-radius: 6px;
+
+        border: none;
+
+        
+        & i {
+            color: #222;
+            transform: scale(1.5);
+        }
+    }
+    
+    .add-option {
+        
+        background-color: var(--green);
+        box-shadow: var(--green) 0px 0px 10px;
+        
+        & i {
+            background-color: var(--green);
+        }
+    }
+
+    .remove-option {
+
+        background-color: var(--red);
+        box-shadow: var(--red) 0px 0px 10px;
+        
+        & i {
+            background-color: var(--red);
+        }
+
+    }
+
+}
+
+.footer {
+
+    display: flex;
+    gap: 3vh;
+    margin-top: 3vh;
+    width: 100%;
+    height: 10vh;
+
+    background-color: white;
+    
+    .footer-header {
+        
+        display: flex;
+            justify-content: center;
+            align-items: center;
+        
+        width: 18vw;
+        height: 100%;
+
+        & h2 {
+
+            font-size: 24px;
+
+            margin: 0;
+
+        }
+    }
+
+    .options-results {
+
+        display: flex;
+
+        width: 78vw;
+
+        .option-result {
+
+            display: flex;
+            font-size: 18px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+        }
+
+    }
+
+    .button-to-run {
+
+        display: flex;
+            justify-content: center;
+            align-items: center;
+
+        width: 12vh;
+
+        & button {
+
+            width: 60%;
+            aspect-ratio: 1;
+            border: none;
+            background-color: var(--blue);
+            border-radius: 6px;
+            box-shadow: var(--blue) 0px 0px 10px;
+
+            & i {
+
+                transform: scale(1.5);
+
+            }
+        }
+    }
+}
+
+.iFacts {
+
+
+    height: 1em;
+    width: 80%;
+    font-size: 18px;
+    margin: 0px 7px;
+    padding: 3px;
+    border: none;
+
+}
+.iNum {
+
+    text-align: right;
+    font-size: 18px;
+    width: 1.2em;
+    padding: 0 0.2em 0 0;
+    height: 1.2em;
+    margin: 0 10px 0 0;
+    border: none;
+
+}
+
+.iFacts::placeholder, .iNum::placeholder {
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+.iNum:focus {
+    border-radius: 6px;
+    background-color: var(--lavander);
+    outline: none !important;
+    border: none;
+}
+
+.iFacts:focus {
+    border-radius: 6px;
+    background-color: var(--lavander);
+    font-family: "Varela Round";
+    outline: none !important;
+    border: none;
+}
+
+.title-input {
+    font-family: monospace;
+    font-size: 24px;
+    margin: 0.5em 0;
+    padding: 0 0.5em;
+    border:none;
+    width: 100%;
+    box-sizing: border-box;
+    &:focus {
+        outline: none;
+    }
+    &::placeholder {
+        font-size: 22px;
+        font-style: italic;
+    }
+}
+
+.values {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.value-input {
+    font-size: 18px;
+    text-align: center;
+    width: 2em;
+    border:none;
+    &:focus {
+        outline: none;
+    }
+}
+
+.best-option {
+    transition: 0.8s;
+    background-color: var(--green);
+    /*box-shadow: var(--green) 0px 0px 20px;*/
+}
